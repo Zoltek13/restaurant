@@ -678,8 +678,6 @@ body.lock {
 /* CSS Mode */
 .swiper-container-css-mode > .swiper-wrapper {
   overflow: auto;
-  scrollbar-width: none;
-  /* For Firefox */
   -ms-overflow-style: none;
   /* For Internet Explorer and Edge */
 }
@@ -4708,7 +4706,7 @@ body.lock {
   -o-transition: 0.2s;
   transition: 0.2s;
   background-color: #ff756c;
-  font-weight: 18;
+  font-size: 18px;
   color: #fff;
 }
 

@@ -147,6 +147,8 @@ const body = document.querySelector('body');
 const sections = document.querySelectorAll('.section');
 const menuLinks = document.querySelectorAll('.menu__link');
 
+const introBtns = document.querySelectorAll('.intro__btn');
+
 const resizeValue = body.clientWidth;
 
 if (resizeValue > 767.98) {
@@ -157,6 +159,7 @@ if (resizeValue > 767.98) {
             menuLinks.forEach(link => {
                const linkHref = link.getAttribute('href').replace('#', '');
                link.classList.toggle('active', linkHref === entry.target.id);
+               link.blur();
             });
          }
       });
@@ -169,9 +172,19 @@ if (resizeValue > 767.98) {
    });
 }
 
-
 menuLinks.forEach(link => {
    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const targetId = event.target.getAttribute('href').replace('#', '');
+      window.scrollTo({
+         top: document.getElementById(targetId).offsetTop,
+         behavior: 'smooth'
+      });
+   });
+});
+
+introBtns.forEach(introBtn => {
+   introBtn.addEventListener('click', (event) => {
       event.preventDefault();
       const targetId = event.target.getAttribute('href').replace('#', '');
       window.scrollTo({

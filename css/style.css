@@ -4949,6 +4949,16 @@ body.lock {
   padding: 10px;
   background-color: #fff;
   color: #222222;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+@media (min-width: 991.98px) {
+  .tag__link:hover, .tag__link:focus {
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
 }
 
 .tag__search {

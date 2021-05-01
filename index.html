@@ -295,11 +295,13 @@
                               <div class="form-wellcome__input">
                                  <input type="number" name="total people" placeholder="Total People">
                               </div>
-                              <div class="form-wellcome__input">
-                                 <input type="date" name="date" placeholder="Date: 14/02/2022">
+                              <div class="form-wellcome__input form-wellcome__input_date">
+                                 <input type="text" name="date" placeholder="Date: 14/02/2022"
+                                    onfocus="(this.type='date')" onblur="(this.type='text')">
                               </div>
-                              <div class="form-wellcome__input">
-                                 <input type="time" name="time" placeholder="Time: 04:00pm">
+                              <div class="form-wellcome__input form-wellcome__input_time">
+                                 <input type="text" name="time" placeholder="Time : 16:00" onfocus="(this.type='time')"
+                                    onblur="(this.type='text')">
                               </div>
                               <div class="form-wellcome__input">
                                  <input type="number" name="table№" placeholder="Table No">
